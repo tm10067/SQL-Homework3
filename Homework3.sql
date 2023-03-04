@@ -1,4 +1,4 @@
-/* Урок 3. SQL – выборка данных, сортировка, агрегатные функции
+/* Урок 3. SQL – выборка данных, сортировка, агрегатные функции. Практическое задание:
 Написать скрипт, возвращающий список имен (только firstname) пользователей без повторений в алфавитном порядке. [ORDER BY]
 Выведите количество мужчин старше 35 лет [COUNT].
 Сколько заявок в друзья в каждом статусе? (таблица friend_requests) [GROUP BY]
@@ -23,8 +23,8 @@ SELECT COUNT(user_id)
 /* Сколько заявок в друзья в каждом статусе? (таблица friend_requests) [GROUP BY] */
 
   SELECT status, COUNT(requested_at)
-	  AS number_of_requests_per_status
-	FROM vk.friend_requests
+      AS number_of_requests_per_status
+    FROM vk.friend_requests
 GROUP BY status;
 
 /* Выведите номер пользователя, который отправил больше всех заявок в друзья (таблица friend_requests) [LIMIT]. */
